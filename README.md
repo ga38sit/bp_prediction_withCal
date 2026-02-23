@@ -1,13 +1,13 @@
 This Git Repository contains our used models of our work "The Role of Dataset Integrity, Calibration and Signal Quality in Neural Network-Based Blood Pressure Estimation" as .py files, as well as the used models from [1] and [2] as our benchmark test.
 
 Our Models:
-- mlp_withCal 		--> MLP processing only scalar features model with flag, wether to include calibration data or not
-- resnet_withCal 	--> added ResNet based block for processing signal inputs parallel to the MLP, processing the scalar features. Also includes flag, which enables/disables the usage of calibration data
-- tcn_withCal 		--> added TCN based block for processing signal inputs parallel to the MLP, processing the scalar features. Also includes flag, which enables/disables the usage of calibration data
+- mlp_withCal 		--> MLP processing only scalar features model with flag, whether to include calibration data or not
+- resnet_withCal 	--> added ResNet blocks for processing signal inputs parallel to the MLP, processing the scalar features. Also includes flag, which enables/disables the usage of calibration data
+- tcn_withCal 		--> added TCN blocks for processing signal inputs parallel to the MLP, processing the scalar features. Also includes flag, which enables/disables the usage of calibration data
 
 Benchmark Models: 
-- mlp_benchmark 			--> Model from [1], adjusted to use our predictions heads for DBP, SBP and PP
-- deep_bp_benchmark 	--> Model from [2], adjusted to use our predictions heads for DBP, SBP and PP
+- mlp_benchmark 			--> Model from [1], adapted to support our prediction heads for DBP, SBP, and PP. For benchmark evaluation, the loss weight for PP is set to 0, as PP was not included in [1].
+- deep_bp_benchmark 	--> Model from [2], adapted to support our prediction heads for DBP, SBP, and PP. For benchmark evaluation, the loss weight for PP is set to 0, as PP was not included in [2].
 
 
 
