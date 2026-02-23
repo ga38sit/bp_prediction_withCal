@@ -1,4 +1,4 @@
-This Git Repository contains our used models as .py files in our work "The Role of Dataset Integrity, Calibration and Signal Quality in Neural Network-Based Blood Pressure Estimation", as well as the used models from [1] and [2] as our benchmark test.
+This Git Repository contains our used models of our work "The Role of Dataset Integrity, Calibration and Signal Quality in Neural Network-Based Blood Pressure Estimation" as .py files, as well as the used models from [1] and [2] as our benchmark test.
 
 Our Models:
 - mlp_withCal 		--> MLP processing only scalar features model with flag, wether to include calibration data or not
