@@ -16,7 +16,6 @@ def res_block_1d(x, filters, kernel_size=5, dropout_rate=0.0, l2_reg=0.0, name=N
     if dropout_rate > 0:
         x = layers.Dropout(dropout_rate, name=f"{name}_drop1" if name else None)(x)
 
-
     x = layers.Conv1D(
         filters, kernel_size, padding="same", activation=None,
         kernel_regularizer=regularizers.l2(l2_reg),
@@ -36,7 +35,7 @@ def res_block_1d(x, filters, kernel_size=5, dropout_rate=0.0, l2_reg=0.0, name=N
     x = layers.Activation("relu", name=f"{name}_relu_out" if name else None)(x)
     return x
 
-def build_minimal_resnet_withCal_and_signal_bn_v2withCalFlag(
+def build_minimal_resnet_withCal(
         input_length=680,
         input_channels=3,
         scalar_features=15,
