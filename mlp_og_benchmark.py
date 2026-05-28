@@ -1,8 +1,7 @@
 import tensorflow as tf
 from typing import List, Optional
 
-
-def build_mlp_regressor_og(
+def build_mlp_og(
     scalar_features: int,
     hidden_dims: List[int] = [2048, 4096, 8192, 2048],
     activation: str = "relu",
@@ -35,6 +34,6 @@ def build_mlp_regressor_og(
     model = tf.keras.Model(
         inputs=model_inputs,
         outputs={"label_delta": label_delta, "label_dbp": label_dbp, "label_sbp": label_sbp},
-        name="MLPRegressorOG",
+        name="mlp_og",
     )
     return model
